@@ -11,6 +11,7 @@ function Player(x, y, direction) {
     this.x = x;
     this.y = y;
     this.direction = direction;
+    this.weapon = new createImageBitmap('swordtilt.png', 91, 142)
 }
 
   

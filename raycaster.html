@@ -53,6 +53,9 @@ div#ceiling {
 <body>
 
 <div id="screen">
+<div id = "sword">
+	<img src = "swordtilt.png" style = "position: absolute; left: 230px; top: 100px; z-index:3;">
+</div>
 <div id="floor"></div>
 <div id="ceiling"></div>
 </div>
@@ -101,7 +104,8 @@ var player = {
 	rot : 0,		// the current angle of rotation
 	speed : 0,		// is the playing moving forward (speed = 1) or backwards (speed = -1).
 	moveSpeed : 1,	// how far (in map units) does the player move each step/update
-	rotSpeed :  90 * Math.PI / 180//6 * Math.PI / 180	// how much does the player rotate each step/update (in radians)
+	rotSpeed :  90 * Math.PI / 180,//6 * Math.PI / 180	// how much does the player rotate each step/update (in radians)
+	// weapon : new createImageBitmap('swordtilt.png', 91, 142)
 }
 
 var mapWidth = 0;
@@ -160,6 +164,8 @@ function initScreen() {
 		img.src = (window.opera ? "walls_19color.png" : "walls.png");
 		img.style.position = "absolute";
 		img.style.left = "0px";
+		
+
 
 		strip.appendChild(img);
 		strip.img = img;	// assign the image to a property on the strip element so we have easy access to the image later
@@ -167,6 +173,8 @@ function initScreen() {
 		screenStrips.push(strip);
 		screen.appendChild(strip);
 	}
+
+
 
 }
 
